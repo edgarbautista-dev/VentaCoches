@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView LblMensajeDos;
     private TextView LblMensajeTres;
     private TextView LblMensajeCuatro;
+
+    private TextView LblSucursales;
     private Spinner cmbAño;
     private Spinner cmbColor;
     private Button btnBuscar;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         LblMensajeDos=(TextView) findViewById(R.id.labelNombre);
         LblMensajeTres=(TextView) findViewById(R.id.labelAño);
         LblMensajeCuatro=(TextView) findViewById(R.id.labelColor);
+        LblSucursales=(TextView) findViewById(R.id.linkSucursales);
         btnBuscar=(Button) findViewById(R.id.button);
         cmbMarca =(Spinner) findViewById(R.id.cmbAutos);
         cmbNombres=(Spinner) findViewById(R.id.cmbNombre);
@@ -143,6 +146,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("color", colorSeleccionado);
                 startActivity(intent);
             }
+        });
+        LblSucursales.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(intent);
         });
     }
 }
