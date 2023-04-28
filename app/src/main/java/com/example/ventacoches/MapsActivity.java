@@ -1,5 +1,4 @@
 package com.example.ventacoches;
-
 import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -38,13 +37,39 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        MarkerOptions marker1 = new MarkerOptions()
+                .position(new LatLng(20.652715, -103.396024))
+                .title("Ventas Run Run Car Zapopan");
+
+        MarkerOptions marker2 = new MarkerOptions()
+                .position(new LatLng(20.669077, -103.385516))
+                .title("Ventas Run Run Car Guadalajara");
+
+        MarkerOptions marker3 = new MarkerOptions()
+                .position(new LatLng(20.673548, -103.396411))
+                .title("Ventas Run Run Car Zapopan 2");
+
+        MarkerOptions marker4 = new MarkerOptions()
+                .position(new LatLng(20.640371, -103.409791))
+                .title("Ventas Run Run Car Zapopan 3");
+
+        mMap.addMarker(marker1);
+        mMap.addMarker(marker2);
+        mMap.addMarker(marker3);
+        mMap.addMarker(marker4);
+        LatLng location = new LatLng(20.6760607,-103.3674075);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,12.13f));
         // Add a marker in Sydney and move the camera
-        LatLng location = new LatLng(20.6110, -105.2346);
+       /* LatLng location = new LatLng(20.6110, -105.2346);
+        LatLng sucursal2 = new LatLng(20.652715, -103.396024);
         mMap.addMarker(new MarkerOptions().position(location).title("Marker in Vallarta"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
+        mMap.addMarker(new MarkerOptions().position(sucursal2).title("Marker in Zapopan"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,15));*/
+
     }
 }

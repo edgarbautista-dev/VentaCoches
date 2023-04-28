@@ -2,6 +2,7 @@
 .gradle
 /local.properties
 /.idea
+/.idea/sonarlint
 .DS_Store
 /build
 /captures
