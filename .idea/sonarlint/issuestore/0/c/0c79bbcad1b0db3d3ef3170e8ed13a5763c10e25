@@ -1,0 +1,7 @@
+
+E
+java:S1604J"(Make this anonymous inner class a lambda(•È¬´8ºÚÑ¦ê0
+q	java:S116"URename this field "LblMensaje" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ø¨ö8£œ¡¦ê0
+n	java:S116"RRename this field "cmbAÃ±o" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ýßòö8£œ¡¦ê0
+u
+java:S1450"XRemove the "btnBuscar" field and declare it as a local variable in the relevant methods.(–…œˆ8„ÛÑ¦ê0
