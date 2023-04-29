@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="1dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:text="Marca:"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/cmbMarca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/cmbMarca"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/labelModelo"
+            app:layout_constraintEnd_toEndOf="@+id/cmbModelo"
+            app:layout_constraintStart_toStartOf="@+id/labelMarca"
+            app:layout_constraintTop_toBottomOf="@+id/labelMarca" />
+
+        <TextView
+            android:id="@+id/labelModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Modelo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/cmbModelo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmbMarca" />
+
+        <EditText
+            android:id="@+id/cmbModelo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/labelColor"
+            app:layout_constraintEnd_toEndOf="@+id/cmbColor"
+            app:layout_constraintStart_toStartOf="@+id/labelModelo"
+            app:layout_constraintTop_toBottomOf="@+id/labelModelo" />
+
+        <TextView
+            android:id="@+id/labelAnio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Año"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/cmbAnio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmbColor" />
+
+        <EditText
+            android:id="@+id/cmbAnio"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/guardar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelAnio" />
+
+        <TextView
+            android:id="@+id/labelColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="9dp"
+            android:text="Color"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/cmbColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmbModelo" />
+
+        <EditText
+            android:id="@+id/cmbColor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/labelAnio"
+            app:layout_constraintStart_toStartOf="@+id/labelColor"
+            app:layout_constraintTop_toBottomOf="@+id/labelColor" />
+
+        <Button
+            android:id="@+id/guardar"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="38dp"
+            android:backgroundTint="#0000FF"
+            android:text="Guardar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/cancelar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmbAnio" />
+
+        <Button
+            android:id="@+id/cancelar"
+            android:layout_width="119dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="141dp"
+            android:backgroundTint="#FEE00088"
+            android:text="Cancelar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+

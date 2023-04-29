@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private Spinner cmbColor;
     private Button btnBuscar;
 
+    private Button agregar;
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         cmbNombres=(Spinner) findViewById(R.id.cmbNombre);
         cmbAño=(Spinner) findViewById(R.id.cmbAño);
         cmbColor=(Spinner) findViewById(R.id.cmbColor);
+
+        agregar = findViewById(R.id.agregar);
 
         CarService carService = new CarService();
         CarModel[] carModel = carService.getCarModel();
@@ -149,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
         });
         LblSucursales.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(intent);
+        });
+
+        agregar.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SaveAutoActivity.class);
             startActivity(intent);
         });
     }
